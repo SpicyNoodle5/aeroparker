@@ -23,8 +23,12 @@ public class RegisterController {
     @PostMapping("/register")
     public String register(@ModelAttribute Customer customer, Model model) {
         model.addAttribute("customer", customer);
-        service.register(customer);
-        return "success";
+
+        boolean success = service.register(customer);
+        if(success) {
+            return "success";
+        }
+        return "register";
     }
 
 }
