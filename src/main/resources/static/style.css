@@ -1,0 +1,21 @@
+.center-text {
+    text-align: center;
+}
+
+.error {
+    color: red;
+}
+
+.form {
+    margin: auto;
+    width: 20%;
+}
+
+.form-text {
+    text-align: right;
+}
+
+.form-entry {
+    text-align: left;
+    width: 50%;
+}

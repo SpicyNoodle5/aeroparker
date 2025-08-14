@@ -3,30 +3,33 @@
 <head> 
     <title>Registration Form</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link th:href="@{style.css}" rel="stylesheet" />
 </head>
 <body>
-	<h1>Register</h1>
-    <form action="#" th:action="@{/register}" th:object="${customer}" method="post">
-        <p>Email* <input type="text" th:field="*{emailAddress}" required /></p>
-        <p>Title* 
-            <select th:field="*{title}" required>
-                <option value="Mr">Mr</option>
-                <option value="Mrs">Mrs</option>
-                <option value="Miss">Miss</option>
-                <option value="Ms">Ms</option>
-                <option value="Dr">Dr</option>
-                <option value="Other">Other</option>
-            </select>
-        </p>
-        <p>First Name* <input type="text" th:field="*{firstName}" required /></p>
-        <p>Last Name* <input type="text" th:field="*{lastName}" required /></p>
-        <p>Address 1* <input type="text" th:field="*{addressLine1}" required /></p>
-        <p>Address 2 <input type="text" th:field="*{addressLine2}" /></p>
-        <p>City <input type="text" th:field="*{city}" /></p>
-        <p>Postcode* <input type="text" th:field="*{postcode}" required /></p>
-        <p>Phone Number <input type="text" th:field="*{phoneNumber}" /></p>
-        <p><input type="submit" value="Submit" /> <input type="reset" value="Reset" /></p>
-    </form>
-    <p th:text="${error}"></p>
+	<h1 class="center-text">Register</h1>
+    <div class="form">
+        <form action="#" th:action="@{/register}" th:object="${customer}" method="post">
+            <p class="form-text">Email* <input class="form-entry" type="text" th:field="*{emailAddress}" required /></p>
+            <p class="form-text">Title* 
+                <select class="form-entry" th:field="*{title}" required>
+                    <option value="Mr">Mr</option>
+                    <option value="Mrs">Mrs</option>
+                    <option value="Miss">Miss</option>
+                    <option value="Ms">Ms</option>
+                    <option value="Dr">Dr</option>
+                    <option value="Other">Other</option>
+                </select>
+            </p>
+            <p class="form-text">First Name* <input class="form-entry" type="text" th:field="*{firstName}" required /></p>
+            <p class="form-text">Last Name* <input class="form-entry" type="text" th:field="*{lastName}" required /></p>
+            <p class="form-text">Address 1* <input class="form-entry" type="text" th:field="*{addressLine1}" required /></p>
+            <p class="form-text">Address 2 <input class="form-entry" type="text" th:field="*{addressLine2}" /></p>
+            <p class="form-text">City <input class="form-entry" type="text" th:field="*{city}" /></p>
+            <p class="form-text">Postcode* <input class="form-entry" type="text" th:field="*{postcode}" required /></p>
+            <p class="form-text">Phone Number <input class="form-entry" type="text" th:field="*{phoneNumber}" /></p>
+            <p class="center-text"><input type="submit" value="Submit" /></p>
+        </form>
+    </div>
+    <p class="error center-text" th:text="${error}"></p>
 </body>
 </html>
